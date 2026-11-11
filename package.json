@@ -1,0 +1,28 @@
+{
+  "name": "echoes-of-longyuan",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "predev": "node scripts/public-assets.mjs",
+    "dev": "vite",
+    "prebuild": "node scripts/public-assets.mjs",
+    "build": "vite build",
+    "preview": "vite preview",
+    "assets:restore": "node scripts/public-assets.mjs",
+    "assets:pack": "node scripts/public-assets.mjs --pack",
+    "check": "node scripts/verify-v2.mjs"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

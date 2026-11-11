@@ -1,0 +1,5 @@
+import {Link} from 'react-router-dom';
+import PageFrame from '../components/PageFrame.jsx';
+import Sources from '../components/Sources.jsx';
+import {aboutSections,sources} from '../data/content.js';
+export default function About(){return <PageFrame number="06" english="ABOUT / A NOTE FROM THE EXHIBITION" title="让回声，抵达今天。" intro="关于这座数字展馆，关于一段历史如何被认真讲述。" className="about-page"><section className="about-manifesto"><span>烽</span><div><h2>烽火陇原</h2><p>THE ECHOES OF LONGYUAN</p><blockquote>山河有信，精神不息。</blockquote><small>甘肃农业大学第五届红色网页设计大赛 · 参赛创作项目</small></div></section><div className="about-sections">{aboutSections.map(([num,title,text])=><section key={num}><span>{num}</span><h2>{title}</h2><p>{text}</p></section>)}</div><section className="source-directory"><span className="eyebrow">SOURCE REGISTER / 资料目录</span><h2>每一段叙述，都有来处。</h2><Sources ids={Object.keys(sources)}/><p>资料整理日期：2026年11月。历史叙述为摘要；精确日期以各节点列明的来源为依据。哈达铺采用月份精度，以避免将先头部队与中央领导抵达日期混用。</p></section><div className="about-return"><Link to="/archives" className="outline-button">开始查阅档案 ↗</Link><Link to="/" className="text-link">返回首页 ↗</Link></div></PageFrame>}
